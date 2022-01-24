@@ -45,11 +45,7 @@ class GameOfLife(metaclass=SingletonMeta):
                 new_world[i][j] = 0
                 
                 
-        if self.counter > 0:
-            self.old_world = copy.deepcopy(self.world)
-        else:
-            self.old_world = copy.deepcopy(new_world)
-            
+        self.old_world = copy.deepcopy(self.world)
         self.world = new_world
         self.counter += 1
 
