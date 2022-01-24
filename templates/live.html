@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block app_content %}
-    <a class="btn btn-warning home" href="/">На главную</a>
+    <a class="btn btn-warning home" href="{{ url_for("index") }}">На главную</a>
     <a class="btn btn-info refresh" href="{{ url_for('live') }}">Создать новую жизнь</a>
 
 <div class="counter">{{ life.counter }}</div>
